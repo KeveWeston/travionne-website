@@ -26,3 +26,12 @@ document.getElementById("planner-form").addEventListener("submit", function (e) 
     document.getElementById("itinerary").innerHTML = itinerary;
   });
   
+  // Dark Mode Toggle
+const darkModeButton = document.getElementById("dark-mode-button");
+darkModeButton.addEventListener("click", function() {
+  document.body.classList.toggle("dark-mode");
+  const nav = document.querySelector("nav");
+  nav.classList.toggle("dark-mode");
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach(button => button.classList.toggle("dark-mode"));
+});
