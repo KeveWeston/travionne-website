@@ -8,21 +8,34 @@
     --footer-color: #171613;    /* Dark Brown for footer */
 }
 
+/* Navigation Bar */
 nav {
-    background-color: var(--header-color);      /* Yellow */
+    background-color: #171613; /* Dark Gray for the navbar background */
     padding: 10px 0;
     text-align: center;
-}
-nav ul li a {
-    color: var(--background-color);             /* White text */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* This makes the list items appear in a row */
+    justify-content: center; /* Centers the navigation items horizontally */
+    gap: 20px; /* Space between each navigation item */
+  }
+  
+  nav ul li {
+    display: inline-block; /* Ensure the list items are inline */
+  }
+  
+  nav ul li a {
+    color: #FFD056; /* Yellow text color for buttons */
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-}
-nav ul li a:hover {
-    color: var(--secondary-color);              /* Golden Brown on hover */
-}
-
+    padding: 10px 20px; /* Adds padding for better button size */
+    border-radius: 30px; /* Makes the button have r
+  
 
 header {
     background-color: var(--header-color);      /* Yellow */
@@ -51,6 +64,33 @@ section#features {
     margin-bottom: 20px;
 }
 
+/* Feature Cards */
+#features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .feature-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1.2rem;
+  }
+  
+
 section h2 {
     font-size: 24px;
     color: var(--text-color);                   /* Dark Brown */
@@ -77,6 +117,23 @@ button:hover {
     background-color: var(--secondary-color);   /* Golden Brown on hover */
     transform: scale(1.05);                     /* Slightly enlarge on hover */
 }
+/* Button Styling */
+button {
+    background-color: #00b4d8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05); /* Slightly grow the button */
+  }
+  
 
 
 /* Trip Planner Form */
@@ -143,3 +200,54 @@ footer a:hover {
         width: 90%;
     }
 }
+/* Hero Image Styling */
+.hero-image {
+    background-image: url('images/full-shot-travel-concept-with-landmarks-scaled.jpg'); /* Path to your hero image */
+    background-size: cover; /* Makes the image cover the entire section */
+    background-position: center; /* Centers the image */
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-image h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero-image p {
+    font-size: 1.5rem;
+  }
+  
+  /* Dark Mode */
+body.dark-mode {
+    background-color: #171613; /* Dark background color */
+    color: #f9f9f9; /* Light text color for dark mode */
+  }
+  
+  nav.dark-mode {
+    background-color: #121212; /* Dark background for navbar */
+  }
+  
+  nav.dark-mode ul li a {
+    color: #FFD056; /* Keep yellow color for the buttons in dark mode */
+  }
+  
+  nav.dark-mode ul li a:hover {
+    background-color: #D2AB46; /* Gold background for hover */
+    color: #171613; /* Dark text on hover */
+  }
+  
+  button.dark-mode {
+    background-color: #D2AB46; /* Gold button for dark mode */
+    color: #171613; /* Dark text for the button */
+  }
+  
+  button.dark-mode:hover {
+    background-color: #FFD056; /* Yellow on hover */
+    color: #171613; /* Dark text */
+  }
+  
