@@ -35,3 +35,4 @@ darkModeButton.addEventListener("click", function() {
   const buttons = document.querySelectorAll("button");
   buttons.forEach(button => button.classList.toggle("dark-mode"));
 });
+
