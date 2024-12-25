@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travionne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to Travionne</h1>
+    <p>Your perfect travel companion for planning trips!</p>
+    <img src="images/Plane.jpg" alt="Beautiful travel scenery" />
+  </header>
+
+  <section id="features">
+    <h2>Plan Your Next Adventure</h2>
+    <p>Discover personalized itineraries tailored just for you.</p>
+    <button id="demo-button">Try the Demo</button>
+  </section>
+
+  <section id="trip-planner">
+    <h2>Plan Your Trip</h2>
+    <form id="planner-form">
+      <label for="trip-details">Enter your trip details:</label>
+      <input
+        type="text"
+        id="trip-details"
+        placeholder="e.g., Plan a 5-day trip to Paris on a $2000 budget."
+        required
+      />
+      <button type="submit">Generate Plan</button>
+    </form>
+    <div id="itinerary"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Travionne. All rights reserved.</p>
+    <p>Follow us: 
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
