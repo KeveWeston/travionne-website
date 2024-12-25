@@ -23,7 +23,7 @@ Welcome to **Travionne**! Travionne is your ultimate AI travel companion, helpin
 We welcome contributions! If you'd like to help make Travionne even better, feel free to fork the repository, make changes, and submit a pull request.
 
 ### Contact:
-For questions or feedback, feel free to reach out via email at [your-email@example.com] or open an issue in the GitHub repository.
+For questions or feedback, feel free to reach out via email at [Keveweston@gmail.com] or open an issue in the GitHub repository.
 
 ### License:
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
