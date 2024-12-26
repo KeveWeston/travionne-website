@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travionne</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-  <nav>
+  <nav id="navbar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#features">Features</a></li>
@@ -19,40 +18,94 @@
     </ul>
   </nav>
 
-  <header id="home">
-    <h1>Welcome to Travionne</h1>
-    <p>Your perfect travel companion for planning trips!</p>
-    <img src="images/Plane.jpg" alt="Beautiful travel scenery" />
-    <header>
-        <div class="hero-image">
-          <h1>Welcome to Travionne</h1>
-          <p>Your All-in-One Carry-On for Travel!</p>
-        </div>
-      </header>      
+  <header id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Travionne</h1>
+      <p>Your all-in-one travel companion for planning trips!</p>
+      <img src="images/Plane.jpg" alt="Beautiful travel scenery" class="hero-image" />
+    </div>
   </header>
 
-  <section id="features">
-    <h2>Plan Your Next Adventure</h2>
-    <p>Discover personalized itineraries tailored just for you.</p>
-    <button id="demo-button">Try the Demo</button>
+  <!-- Rest of the content here -->
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="step">
+      <div class="step-text">
+        <h3>Input Your Preferences</h3>
+        <p>Simply enter your trip details, including your destination, travel dates, budget, and interests. Whether you're looking for adventure, relaxation, or cultural experiences, Travionne customizes your journey.</p>
+      </div>
+      <div class="step-image">
+        <img src="How it works images/step1.webp" alt="Step 1">
+      </div>
+    </div>
+  <div class="step">
+    <div class="step-text">
+      <h3>AI-Driven Recommendations</h3>
+      <p>Based on your preferences, our AI system analyzes the best options available in real-time, presenting you with the most suitable flights, hotels, attractions, and dining choices.</p>
+    </div>
+    <div class="step-image">
+      <img src="How it works images/step2.webp" alt="Step 2">
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-text">
+      <h3>Curated Itinerary</h3>
+      <p>Travionne builds a personalized, day-by-day itinerary that ensures your trip runs smoothly. You’ll have everything planned in advance, with the flexibility to make adjustments at any time.</p>
+    </div>
+    <div class="step-image">
+      <img src="How it works images/step3.webp" alt="Step 3">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-text">
+      <h3>Seamless Booking</h3>
+      <p>Book your trip directly through the platform with a few clicks, or choose to save your options and book later. Travionne’s streamlined process saves you time and effort.</p>
+    </div>
+    <div class="step-image">
+      <img src="How it works images/step4.webp" alt="Step 4">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-text">
+      <h3>On-the-Go Assistance</h3>
+      <p>During your trip, Travionne continues to support you. With real-time updates and recommendations, we ensure that your journey is as stress-free and enjoyable as possible.</p>
+    </div>
+    <div class="step-image">
+      <img src="How it works images/step5.webp" alt="Step 5">
+    </div>
+  </div>
+  
+</section>
+
+  
+
+  <section id="features" class="section">
+    <div class="section-header">
+      <h2>Plan Your Next Adventure</h2>
+      <p>Discover personalized itineraries tailored just for you.</p>
+    </div>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Easy Trip Planning</h3>
+        <p>Generate detailed itineraries with just a few details.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Budget-Friendly</h3>
+        <p>Plan trips within your budget, every time.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Customizable</h3>
+        <p>Tailor your trip with personal preferences.</p>
+      </div>
+    </div>
+    <div class="try-demo">
+      <button id="demo-button">Try the Demo</button>
+    </div>
   </section>
 
-  <section id="features">
-    <div class="feature-card">
-      <h3>Easy Trip Planning</h3>
-      <p>Generate detailed itineraries with just a few details.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Budget-Friendly</h3>
-      <p>Plan trips within your budget, every time.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Customizable</h3>
-      <p>Tailor your trip with personal preferences.</p>
-    </div>
-  </section>
-
-  <section id="trip-planner">
+  <section id="trip-planner" class="section">
     <h2>Plan Your Trip</h2>
     <form id="planner-form">
       <label for="trip-details">Enter your trip details:</label>
@@ -64,10 +117,10 @@
       />
       <button type="submit">Generate Plan</button>
     </form>
-    <div id="itinerary"></div>
+    <div id="itinerary" class="itinerary-display"></div>
   </section>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2024 Travionne. All rights reserved.</p>
     <p>Follow us: 
       <a href="#">Facebook</a> | 
@@ -79,4 +132,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
