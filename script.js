@@ -75,3 +75,35 @@ window.addEventListener('scroll', function() {
     navbar.classList.remove('scrolled');
   }
 });
+
+document.addEventListener("scroll", function () {
+  const plane = document.getElementById("scrolling-plane");
+  const landingButton = document.getElementById("use-ai-planner");
+
+  if (!plane || !landingButton) return; // Ensure elements exist
+
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Move the plane horizontally and vertically
+  const planeHorizontalPosition = scrollPosition * 0.3; // Horizontal speed
+  const planeVerticalPosition = scrollPosition * 0.1; // Vertical speed
+
+  // Apply translation to the plane
+  plane.style.transform = `translate(${planeHorizontalPosition}px, ${planeVerticalPosition}px)`;
+
+  // Check if the plane reaches the button
+  const buttonRect = landingButton.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  if (buttonRect.top >= 0 && buttonRect.top <= viewportHeight / 2) {
+    // Center of the button for precise landing
+    const buttonCenterX = buttonRect.left + buttonRect.width / 2 - 50; // 50 = half plane width
+    const buttonCenterY = buttonRect.top + buttonRect.height / 2 - 50; // 50 = half plane height
+
+    // Land the plane on the button
+    plane.style.transform = `translate(${buttonCenterX}px, ${scrollPosition + buttonCenterY}px)`;
+    plane.style.transition = "transform 0.5s ease-out"; // Smooth landing animation
+  }
+});
+

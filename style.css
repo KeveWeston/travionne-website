@@ -60,29 +60,42 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Hero Section */
-.hero-image {
-  background-image: url('images/full-shot-travel-concept-with-landmarks-scaled.jpg'); /* Path to hero image */
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-section {
+  position: relative;
   text-align: center;
-  color: white;
 }
 
-.hero-image h1 {
+.hero-title, .hero-subtitle {
+  color: black !important; /* Force black color for the text */
+  text-shadow: none !important; /* Remove any possible shadow making it appear white */
+}
+
+.hero-title {
   font-size: 3rem;
+  font-weight: bold;
   margin: 0;
-  animation: fadeIn 2s ease-out;
 }
 
-.hero-image p {
+.hero-subtitle {
   font-size: 1.5rem;
-  animation: slideIn 2s ease-out;
+  margin: 0;
 }
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10; /* Ensure content is above the background */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  z-index: 1; /* Ensure the image stays behind the content */
+}
+
 
 /* Section Styles */
 section {
@@ -419,27 +432,7 @@ nav ul li a:hover {
   background-color: #D2AB46; /* Hover effect */
 }
 
-/* Hero Image Styling */
-.hero-image {
-  background-image: url('images/full-shot-travel-concept-with-landmarks-scaled.jpg'); /* Path to your hero image */
-  background-size: cover; /* Makes the image cover the entire section */
-  background-position: center; /* Centers the image */
-  height: 400px; /* Adjust the height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
 
-.hero-image h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero-image p {
-  font-size: 1.5rem;
-}
 
 /* How it works Section */
 #how-it-works {
@@ -629,7 +622,7 @@ body {
 .hero-section {
   position: relative;
   height: 100vh;
-  background-image: url('images/Plane.jpg'); /* Background image */
+  background-image: url('images/Cover1.jpg'); /* Background image */
   background-size: cover;
   background-position: center;
   color: white;
@@ -723,3 +716,49 @@ html {
 }
 
 /* Other styling as needed */
+/* The plane container */
+#scrolling-plane-container {
+  position: fixed;
+  top: 10%; /* Starts slightly below the top of the page */
+  left: 0;
+  z-index: 100;
+  pointer-events: none; /* So it doesn't block user interactions */
+}
+
+#scrolling-plane {
+  width: 100px;
+  transition: transform 0.5s ease-out; /* Smooth transition */
+}
+
+#trip-planner {
+  position: relative;
+}
+
+#use-ai-planner {
+  display: inline-block; /* Ensure the button is visible */
+  padding: 10px 20px; /* Add padding */
+  background-color: #007BFF; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Add a pointer on hover */
+  font-size: 16px; /* Text size */
+}
+
+#use-ai-planner:hover {
+  background-color: #0056b3; /* Darker background on hover */
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
