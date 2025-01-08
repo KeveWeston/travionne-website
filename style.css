@@ -44,21 +44,7 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-#dark-mode-button {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-#dark-mode-button:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
-}
 
 .hero-section {
   position: relative;
@@ -71,17 +57,20 @@ nav ul li a:hover {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 5rem;
+  color: black !important; 
   font-weight: bold;
   margin: 0;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  color: black !important; 
+  font-size: 3rem;
   margin: 0;
 }
 
 .hero-content {
+  color: black !important; 
   position: absolute;
   top: 50%;
   left: 50%;

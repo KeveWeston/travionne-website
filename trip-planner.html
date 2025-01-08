@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trip Planner - Travionne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#planner">Planner</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Plan Your Perfect Trip with Travionne</h1>
+    </header>
+
+    <section id="trip-planner">
+        <h2>Trip Planner</h2>
+        <form id="tripForm">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="e.g., Paris, Tokyo" required>
+
+            <label for="travelType">Travel Type:</label>
+            <select id="travelType" required>
+                <option value="vacation">Vacation</option>
+                <option value="business">Business</option>
+                <option value="adventure">Adventure</option>
+            </select>
+
+            <label for="duration">Duration (days):</label>
+            <input type="number" id="duration" placeholder="e.g., 5" required>
+
+            <label for="interests">Interests (comma-separated):</label>
+            <input type="text" id="interests" placeholder="e.g., sightseeing, food">
+
+            <label for="budget">Budget ($):</label>
+            <input type="number" id="budget" placeholder="e.g., 1000" required>
+
+            <button type="button" onclick="generateItinerary()">Generate Itinerary</button>
+        </form>
+
+        <div id="itinerary" style="display: none;">
+            <h2>Your Itinerary</h2>
+            <div id="itineraryDetails"></div>
+        </div>
+    </section>
+
+    <script>
+        function generateItinerary() {
+            const destination = document.getElementById('destination').value;
+            const travelType = document.getElementById('travelType').value;
+            const duration = document.getElementById('duration').value;
+            const interests = document.getElementById('interests').value.split(',');
+            const budget = document.getElementById('budget').value;
+
+            let itineraryDetails = `<p><strong>Destination:</strong> ${destination}</p>`;
+            itineraryDetails += `<p><strong>Travel Type:</strong> ${travelType}</p>`;
+            itineraryDetails += `<p><strong>Duration:</strong> ${duration} days</p>`;
+            itineraryDetails += `<p><strong>Interests:</strong> ${interests.join(', ')}</p>`;
+            itineraryDetails += `<p><strong>Budget:</strong> $${budget}</p>`;
+            itineraryDetails += `<h3>Itinerary:</h3><ul>`;
+
+            for (let i = 1; i <= duration; i++) {
+                itineraryDetails += `<li>Day ${i}: Activities planned based on ${interests.join(', ')}</li>`;
+            }
+            itineraryDetails += `</ul>`;
+
+            document.getElementById('itineraryDetails').innerHTML = itineraryDetails;
+            document.getElementById('itinerary').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
